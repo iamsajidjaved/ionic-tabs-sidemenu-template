@@ -1,3 +1,22 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-split-pane>
+  <ion-menu menuId="avocadoMenu" side="start" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/home']">
+          <ion-label>Home</ion-label>
+        </ion-item>
+        <ion-list [routerLink]="['/tabs']">
+            <ion-item>
+              <ion-label>Tabs</ion-label>
+            </ion-item>
+          </ion-list>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-split-pane>
